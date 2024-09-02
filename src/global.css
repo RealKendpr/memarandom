@@ -4,6 +4,6 @@
 
 @layer base {
   .button {
-    @apply grid text-white rounded-full p-2 place-items-center;
+    @apply grid text-white rounded-full place-items-center;
   }
 }

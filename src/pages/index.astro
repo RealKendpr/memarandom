@@ -2,18 +2,19 @@
 import Main from "../layout/main.astro";
 import Footer from "../components/footer.astro";
 import About from "../components/about.astro";
-import ReactCount from "../components/react-counter";
+import ReactCount from "../components/reactCounter";
 ---
 
 <Main title="Memes Page">
   <main>
-    <div class="meme-generator wider:relative">
+    <div
+      class="meme-generator wider:relative wider:border-x wider:border-zinc-500"
+    >
       <div class="img grid place items-center min-h-dvh">
         <img class="select-none" src="./meme.png" alt="a meme" />
       </div>
-      <!-- //error when having * css selector -->
       <div
-        class="right-2 bottom-24 translate-y-0 absolute flex flex-col gap-y-1 bg-blue-950/50 rounded-md wider:left-[calc(100%+.5rem)] wider:right-auto wider:bottom-1/2"
+        class="right-2 bottom-24 translate-y-0 absolute flex flex-col gap-y-2 bg-blue-950/50 rounded-md wider:left-[calc(100%+.5rem)] wider:right-auto wider:bottom-1/2 p-2"
       >
         <ReactCount client:idle />
         <button class="button"
