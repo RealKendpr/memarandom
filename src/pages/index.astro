@@ -11,12 +11,12 @@ import ReactCount from "../components/react-counter";
       <div class="img grid place items-center min-h-dvh">
         <img class="select-none" src="./meme.png" alt="a meme" />
       </div>
-      //error when having * css selector
+      <!-- //error when having * css selector -->
       <div
-        class="right-2 *:grid *:text-white *:rounded-full *:p-2 *:place-items-center bottom-24 translate-y-0 absolute flex flex-col gap-y-1 bg-blue-950/50 rounded-md wider:left-[calc(100%+.5rem)] wider:right-auto wider:bottom-1/2"
+        class="right-2 bottom-24 translate-y-0 absolute flex flex-col gap-y-1 bg-blue-950/50 rounded-md wider:left-[calc(100%+.5rem)] wider:right-auto wider:bottom-1/2"
       >
-        {ReactCount && <ReactCount client:idle />}
-        <button class="btn"
+        <ReactCount client:idle />
+        <button class="button"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="36px"
