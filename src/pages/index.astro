@@ -1,18 +1,19 @@
 ---
 import Main from "../layout/main.astro";
 import Footer from "../components/footer.astro";
+import About from "../components/about.astro";
 ---
 
-<Main title="My Memes">
-  <main class="bg-blue-950">
+<Main title="Memes Page">
+  <main>
     <div class="meme-generator">
       <div class="img grid place items-center min-h-dvh">
-        <img src="./meme.png" alt="" />
+        <img class="select-none" src="./meme.png" alt="a meme" />
       </div>
       <div
-        class="right-2 bottom-1/2 translate-y-0 absolute flex flex-col gap-y-1 bg-blue-950/50 rounded-md"
+        class="right-2 *:grid *:text-white *:rounded-full *:p-2 *:place-items-center bottom-24 translate-y-0 absolute flex flex-col gap-y-1 bg-blue-950/50 rounded-md"
       >
-        <button class="btn grid place-items-center rounded-full p-2">
+        <button class="btn">
           <svg
             height="36px"
             width="36px"
@@ -63,7 +64,7 @@ import Footer from "../components/footer.astro";
             ></svg
           >
         </button>
-        <button class="btn grid place-items-center text-white rounded-full p-2"
+        <button class="btn"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="36px"
@@ -77,6 +78,7 @@ import Footer from "../components/footer.astro";
         >
       </div>
     </div>
+    <About />
   </main>
   <Footer />
 </Main>
