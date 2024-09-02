@@ -2,9 +2,17 @@ import { useState } from "react";
 
 export default function ReactCount() {
   const [reactCount, setReactCount] = useState<number>(2);
-  // const [reacted, setReacted] = useState<boolean>(false);
+  const [reacted, setReacted] = useState<boolean>(false);
+
+  const react = () => {
+    if (!reacted) {
+      setReactCount(reactCount + 1);
+      setReacted(true);
+    }
+  };
+
   return (
-    <button className="btn" onClick={() => setReactCount(reactCount + 1)}>
+    <button className="button" onClick={react}>
       <svg
         height="36"
         width="36"
