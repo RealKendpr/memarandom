@@ -1,35 +1,21 @@
 ---
 import Main from "../layout/main.astro";
-import Footer from "../components/footer.astro";
 import About from "../components/about.astro";
 import ReactCount from "../components/reactCounter";
+import MemeFrame from "../components/memeFrame";
+import FetchMeme from "../components/fetchMeme";
+import Footer from "../components/footer.astro";
 ---
 
 <Main title="Memes Page">
   <main>
-    <div
-      class="meme-generator wider:relative wider:border-x wider:border-zinc-500"
-    >
-      <div class="img grid place items-center min-h-dvh">
-        <img class="select-none" src="./meme.png" alt="a meme" />
-      </div>
+    <div class="meme-generator wide:max-w-sm wide:mx-auto wider:relative">
+      <MemeFrame client:load />
       <div
-        class="right-2 bottom-24 translate-y-0 absolute flex flex-col gap-y-2 bg-blue-950/50 rounded-md wider:left-[calc(100%+.5rem)] wider:right-auto wider:bottom-1/2 p-2"
+        class="right-2 bottom-36 absolute flex flex-col gap-y-2 bg-blue-950/50 rounded-md wider:left-[calc(100%+.5rem)] wider:right-auto wider:bottom-1/2 translate-y-1/2 wider:h-fit p-2"
       >
         <ReactCount client:idle />
-        <button class="button"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="36px"
-            height="36px"
-            viewBox="0 0 20 20"
-            class="hover:text-zinc-300 transition-colors"
-            fill="currentColor"
-            ><path
-              d="M15.65 4.35A8 8 0 1 0 17.4 13h-2.22a6 6 0 1 1-1-7.22L11 9h7V2z"
-            ></path></svg
-          >
-        </button>
+        <FetchMeme client:idle />
       </div>
     </div>
     <About />
