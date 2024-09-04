@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { FirstLoad } from "../utils/stateContainer";
 
 export default function ReactCount() {
-  const [reactCount, setReactCount] = useState<number>(2);
+  const [state] = FirstLoad();
+  const [reactCount, setReactCount] = useState<number>(state.firstLoad ? 0 : 2);
   const [reacted, setReacted] = useState<boolean>(false);
 
   const handleReact = () => {
@@ -16,7 +18,11 @@ export default function ReactCount() {
 
   return (
     <div>
-      <button className="button" onClick={handleReact}>
+      <button
+        className="button disabled:cursor-not-allowed"
+        onClick={handleReact}
+        disabled={state.firstLoad}
+      >
         {reacted ? (
           <svg
             height="36px"
