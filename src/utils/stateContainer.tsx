@@ -6,7 +6,6 @@ const Store = createStore({
     firstLoad:
       () =>
       ({ setState }) => {
-        // const currentCount = getState().count;
         setState({ firstLoad: false });
       },
   },

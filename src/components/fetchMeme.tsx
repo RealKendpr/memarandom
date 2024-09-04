@@ -1,7 +1,6 @@
 import { FirstLoad } from "../utils/stateContainer";
 
 export default function FetchMeme() {
-  // const [firstLoad, setFirstLoad] = useState<boolean>(true);
   const [, actions] = FirstLoad();
 
   return (
