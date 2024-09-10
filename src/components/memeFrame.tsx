@@ -7,11 +7,11 @@ export default function MemeFrame() {
     <div className="img grid place-items-center min-h-dvh relative">
       {state.firstLoad ? (
         <div className="text-zinc-300">
-          <strong>Lorem ipsum dolor sit amet.</strong> <br />
+          <strong>Be Informed</strong> <br />
           <p className="mt-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut iure
-            assumenda sint, cum facere adipisci explicabo neque ut totam quas id
-            nisi aliquid repellat unde voluptas dolorem magnam commodi nostrum.
+            Some of the memes are offensive and can be sensitive for others, So
+            be warned. Please press the button on the right to start generating
+            memes.
           </p>
         </div>
       ) : (
