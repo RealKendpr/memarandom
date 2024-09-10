@@ -1,10 +1,30 @@
 import { FirstLoad } from "../utils/stateContainer";
 
 export default function FetchMeme() {
-  const [, actions] = FirstLoad();
+  const [state, actions] = FirstLoad();
+
+  const handleFetch = async () => {
+    actions.loading(true);
+    if (state.memeUrl != "") {
+      actions.memeUrl("");
+    }
+    try {
+      const res = await fetch("https://picsum.photos/300/300.webp");
+      if (res.ok) {
+        actions.memeUrl(res.url);
+        actions.firstLoad();
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
-    <button className="button" onClick={actions.firstLoad}>
+    <button
+      disabled={state.loading}
+      className="button disabled:cursor-not-allowed"
+      onClick={handleFetch}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="36px"
