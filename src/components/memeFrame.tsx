@@ -11,7 +11,11 @@ export default function MemeFrame() {
           <p className="mt-4">
             Some of the memes are offensive and can be sensitive for others, So
             be warned. Please press the button on the right to start generating
-            memes.
+            memes. <br />
+            <i>
+              ps. first generation might take a while to load because this is
+              hosted for free, so it has its drawbacks.
+            </i>
           </p>
         </div>
       ) : (
@@ -31,8 +35,9 @@ export default function MemeFrame() {
           )}
           {state.memeUrl != "" && (
             <img
+              loading="lazy"
               className="select-none"
-              src={state.memeUrl}
+              src={`${state.memeUrl}&sz=w1000`}
               alt="a meme"
               onLoad={() => actions.loading(false)}
             />
