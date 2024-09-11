@@ -9,9 +9,11 @@ export default function FetchMeme() {
       actions.memeUrl("");
     }
     try {
-      const res = await fetch("https://picsum.photos/300/300.webp");
+      const res = await fetch("https://memarandom.onrender.com/api-get");
       if (res.ok) {
-        actions.memeUrl(res.url);
+        const memeObj = await res.json();
+        actions.memeUrl(memeObj.meme_url);
+
         actions.firstLoad();
       }
     } catch (error) {
