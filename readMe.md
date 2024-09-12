@@ -13,7 +13,7 @@ Uses `npm`.
 
 ## Contributing
 
-I would highly appreciate any contibutions, your effort can help improve this website's code and its UI.
+I would highly appreciate any contibutions, your effort can help improve this website's UI/UX and its code.
 
 1. Fork the this repository
 2. Create a new branch
