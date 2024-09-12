@@ -1,6 +1,6 @@
 # Memarandom
 
-This website uses the [Memarandom API](https://github.com/RealKendpr/memarandom-api) to generate random memes.
+Generate random meme from my very own collection of memes. Uses the [Memarandom API](https://github.com/RealKendpr/memarandom-api) to generate memes.
 
 ## Built with
 
