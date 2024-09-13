@@ -5,6 +5,8 @@ const { title } = Astro.props;
 interface Props {
   title: string;
 }
+
+const metaImg:string = '/src/images/memarandom.jpg'
 ---
 
 <html lang="en">
@@ -14,6 +16,21 @@ interface Props {
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <title>Memarandom</title>
+    <meta name="title" content="Memarandom" />
+    <meta name="description" content="Generate random meme from my very own collection of memes" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://memarandom.netlify.app/" />
+    <meta property="og:title" content="Memarandom" />
+    <meta property="og:description" content="Generate random meme from my very own collection of memes" />
+    <meta property="og:image" content={metaImg} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://memarandom.netlify.app/" />
+    <meta property="twitter:title" content="Memarandom" />
+    <meta property="twitter:description" content="Generate random meme from my very own collection of memes" />
+    <meta property="twitter:image" content={metaImg} />
   </head>
   <body class="bg-zinc-950 pb-5">
     <slot />
