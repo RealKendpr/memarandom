@@ -5,12 +5,15 @@ import About from "../components/about.astro";
 import MemeFrame from "../components/memeFrame";
 import FetchMeme from "../components/fetchMeme";
 import Footer from "../components/footer.astro";
+import Loading from "../components/loading";
 ---
 
 <Main title="Memarandom">
   <main>
     <div class="meme-generator wide:max-w-sm wide:mx-auto wider:relative">
-      <MemeFrame client:load />
+      <MemeFrame client:idle >
+        <Loading client:idle>
+      </MemeFrame>
       <div
         class="right-2 bottom-36 absolute flex flex-col gap-y-2 bg-blue-950/50 rounded-md wider:left-[calc(100%+.5rem)] wider:right-auto wider:bottom-1/2 translate-y-1/2 wider:h-fit p-2"
       >
