@@ -7,6 +7,12 @@ export default {
         wide: "450px",
         wider: "550px",
       },
+      keyframes: {
+        pulse: {
+          // "0%, 100%": { opacity: "1" },
+          "50%": { opacity: ".75" },
+        },
+      },
     },
   },
   plugins: [],
