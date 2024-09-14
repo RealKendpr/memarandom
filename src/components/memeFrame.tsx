@@ -27,9 +27,9 @@ export default function MemeFrame({ children }: { children: ReactNode }) {
         )
       )}
       {state.loadStart && (
-        <div className="absolute w-full min-h-dvh grid place-items-center bg-gray-400 animate-pulse">
+        <div className="absolute w-full min-h-dvh grid place-items-center bg-zinc-500">
           <svg
-            className="size-16 text-gray-200 dark:text-gray-600"
+            className="size-20 text-gray-200 animate-pulse"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
