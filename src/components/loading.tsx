@@ -1,7 +1,7 @@
-import { FirstLoad } from "../utils/stateContainer";
+import { StateStore } from "../utils/stateContainer";
 
 export default function Loading() {
-  const [state] = FirstLoad();
+  const [state] = StateStore();
 
   return (
     state.loading && (

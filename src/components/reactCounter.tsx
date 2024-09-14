@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { FirstLoad } from "../utils/stateContainer";
+import { StateStore } from "../utils/stateContainer";
 
 export default function ReactCount() {
-  const [state] = FirstLoad();
+  const [state] = StateStore();
   const [reactCount, setReactCount] = useState<number>(2);
   const [reacted, setReacted] = useState<boolean>(false);
 

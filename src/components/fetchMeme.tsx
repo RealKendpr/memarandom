@@ -1,7 +1,7 @@
-import { FirstLoad } from "../utils/stateContainer";
+import { StateStore } from "../utils/stateContainer";
 
 export default function FetchMeme() {
-  const [state, actions] = FirstLoad();
+  const [state, actions] = StateStore();
 
   const handleFetch = async () => {
     actions.loading(true);
@@ -13,7 +13,8 @@ export default function FetchMeme() {
       if (res.ok) {
         const memeObj = await res.json();
         actions.memeUrl(memeObj.meme_url);
-
+        actions.loading(false);
+        actions.loadStart(true);
         actions.firstLoad();
       }
     } catch (error) {
